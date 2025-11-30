@@ -29,14 +29,19 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
-  --nav-hover-color: #34b7a7; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #0e442e;  /* The default color of the main navmenu links */
+  --nav-hover-color: #0e442e; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #34b7a7; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #0e442e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-
+.menu-icon {
+  width: 20px;     /* ikon genişliği */
+  height: 20px;    /* ikon yüksekliği */
+  margin-right: 6px; /* yazıyla arasındaki boşluk */
+  object-fit: contain;
+}
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -685,6 +690,13 @@ section,
 .section-title p {
   margin-bottom: 0;
 }
+.section-title .section-icon {
+  width: 40px;          /* istersen 24px, 32px yapabilirsin */
+  height: 40px;
+  display: block;
+  margin: 8px auto 16px auto;  /* üstten ufak boşluk, altta paragrafa yer */
+  object-fit: contain;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -787,7 +799,7 @@ about .content ul {
   top: 4px;
   width: 22px;
   height: 22px;
-  background-image: url("../img/cigdem_ımg/favicon.png"); /* YOL ÖNEMLİ */
+  background-image: url("../img/cigdem_img/favicon.png"); /* YOL ÖNEMLİ */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1391,19 +1403,20 @@ about .content ul {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
-
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+.contact .php-email-form button[type=submit] {
+  background-color: #0e442e;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border: none;
+  transition:0.3s;
 }
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
+  .contact .php-email-form [type=submit]:hover {
+    background-color: #145b3a;
+    padding: 10px;
   }
-}
+
 
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
@@ -1429,22 +1442,20 @@ about .content ul {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
+
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background-color: #0e442e;
 }
-
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}.service-item .service-icon {
+  width: 50px !important;
+  height: 50px !important;
+  display: block;
+  margin: 6px auto 0 auto; /* merkezde küçük ikon */
+  object-fit: contain;
 }
