@@ -1460,3 +1460,19 @@ about .content ul {
   margin: 6px auto 0 auto; /* merkezde küçük ikon */
   object-fit: contain;
 }
+/* Çiğdem tablo tasarımı */
+.cigdem-table {
+  border: 3px solid #0e442e
+  border-radius: 12px 
+  overflow: hidden;
+}
+
+.cigdem-table th,
+.cigdem-table td {
+  border: 2px solid #0e442e !important;
+  padding: 10px;
+}
+
+.cigdem-table th img {
+  vertical-align: middle;
+}
